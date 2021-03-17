@@ -1,0 +1,23 @@
+{
+  "$schema": "./node_modules/@stryker-mutator/core/schema/stryker-schema.json",
+  "packageManager": "npm",
+  "reporters": [
+    "html",
+    "clear-text",
+    "progress"
+  ],
+  "testRunner": "jest",
+  "coverageAnalysis": "perTest",
+  "tempDirName": "stryker-tmp",
+  "disableTypeChecks": "**/*.ts",
+  "mutate": [
+	"./**/*.?(j)?(t)s?(x)", 
+	"!**/?(*.)+(spec|test|config).?(j)?(t)s?(x)", 
+	"!**/*+(Spec|Test).?(j)?(t)s?(x)",
+	"!**/coverage/**", 
+	"!**/dist/**", 
+	"!**/node_modules/**", 
+	"!**/reports/**", 
+	"!**/test/**"
+  ]
+}
